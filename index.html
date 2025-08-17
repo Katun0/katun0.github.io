@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>João — Portfólio</title>
+  <meta name="description" content="Portfólio simples e acessível com HTML5, CSS3 e JavaScript básico." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <h1 class="site-title">João — Portfólio</h1>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="site-main" role="main">
+    <section id="sobre" class="section section--sobre">
+      <div class="container sobre-grid">
+        <article class="sobre-texto">
+          <h2>Olá, seja bem-vindo(a)!</h2>
+          <p>
+            Este é meu portfólio pessoal desenvolvido como exercício de HTML5, CSS3 e JavaScript.
+            Aqui você encontra um pouco sobre mim, minhas habilidades e como falar comigo.
+          </p>
+          <div class="cta-group">
+            <button id="btn-alert" class="btn" type="button" aria-describedby="alert-desc">
+              Dizer olá
+            </button>
+            <span id="alert-desc" class="sr-only">Ao clicar, uma saudação será exibida.</span>
+            <button id="toggle-skills-btn" class="btn btn--secondary" type="button" aria-controls="habilidades" aria-expanded="true">
+              Ocultar habilidades
+            </button>
+          </div>
+        </article>
+        <figure class="sobre-figure">
+          <img src="assets/images/joao.jpg" alt="Foto de João sorrindo" loading="lazy" />
+          <figcaption>João — Desenvolvedor em formação</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="habilidades" class="section section--habilidades" aria-live="polite">
+      <div class="container">
+        <h2>Habilidades</h2>
+        <p>Algumas tecnologias e conceitos que estou estudando:</p>
+        <ul class="skills-list">
+          <li>Desenvolvedor Php pleno</li>
+          <li>Familiar com Symfony 7+</li>
+          <li>JavaScript básico</li>
+          <li>Boas práticas de acessibilidade</li>
+          <li>Python Básico</li>
+          <li>Familiarizado com ferramentas Web (PHP, HTML, CSS)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projetos" class="section section--projetos">
+      <div class="container projetos-grid">
+        <article class="card" aria-labelledby="proj1-titulo">
+          <img src="assets/images/CSRF.png" alt="Captura ilustrativa de estudo sobre CSRF" loading="lazy" />
+          <div class="card-body">
+            <h3 id="proj1-titulo">Estudo: CSRF</h3>
+            <p>Pequeno estudo visual sobre Cross-Site Request Forgery e como preveni-lo.</p>
+            <a class="btn-link" href="#" aria-label="Abrir estudo sobre CSRF (em breve)">Ver mais</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contato" class="section section--contato">
+      <div class="container">
+        <h2>Contato</h2>
+        <p class="contatos-links">
+          Redes e contato rápido:
+          <a href="#">E-mail</a>
+          <span aria-hidden="true">•</span>
+          <a href="https://github.com/katun0" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span aria-hidden="true">•</span>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="ano-atual"></span> João — Todos os direitos reservados.</p>
+      <p class="visitas" id="visitas"></p>
+    </div>
+  </footer>
+
+  <noscript>
+    <p style="padding:1rem; text-align:center">Este site funciona melhor com JavaScript habilitado.</p>
+  </noscript>
+
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/canvas-message.js"></script>
+</body>
+</html>
